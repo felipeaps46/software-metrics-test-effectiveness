@@ -1,0 +1,132 @@
+\documentclass[
+    12pt,
+    a4paper,
+    sumario=tradicional,
+    oneside,
+    article
+]{abntex2}
+
+% ---
+% Pacotes básicos
+% ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[alf]{abntex2cite}
+
+% ---
+% Dados do trabalho
+% ---
+\titulo{Uma Análise Empírica entre Categorias ODC e Eficácia de Testes via Mutation Testing}
+\autor{Guilherme de Almeida Rocha Vieira \and Felipe Augusto Pereira de Sousa}
+\local{Belo Horizonte}
+\data{2026}
+\instituicao{Pontifícia Universidade Católica de Minas Gerais}
+
+\begin{document}
+
+% ---
+% Elementos pré-textuais
+% ---
+\pretextual
+
+\imprimircapa
+
+% Resumo em português
+\begin{resumo}
+A qualidade dos testes de software é fundamental para garantir a
+confiabilidade de sistemas, mas métricas tradicionais, como a
+cobertura de código, são insuficientes para capturar se os testes
+de fato detectam defeitos. Além disso, a ausência de uma
+caracterização do tipo de defeito que escapa aos testes dificulta
+o direcionamento de esforços de melhoria da estratégia de teste de
+forma orientada a dados. Este trabalho investiga a relação entre
+categorias da Classificação Ortogonal de Defeitos (ODC) e a
+eficácia de testes, medida por meio de mutation testing, buscando
+verificar se diferentes tipos de defeito apresentam níveis
+distintos de detecção. Para isso, pull requests de correção de
+bugs foram minerados de repositórios open-source no GitHub,
+classificados segundo os atributos do ODC e avaliados por meio de
+mutation testing (via Stryker), comparando a capacidade de
+detecção da suíte de testes antes e depois da correção do defeito.
+[RESULTADO A PREENCHER]. Este estudo contribui para a literatura
+de engenharia de software ao integrar uma taxonomia consolidada de
+causa de defeito com uma métrica de eficácia de teste mais
+rigorosa que a cobertura, oferecendo subsídios para estratégias de
+teste direcionadas por tipo de defeito.
+
+ \noindent
+ \textbf{Palavras-chave}: Teste de software; Mutation testing; ODC; Detecção de defeitos.
+\end{resumo}
+
+% Resumo em inglês (abstract)
+\begin{resumo}[Abstract]
+Software test quality is critical to ensure system reliability, but
+traditional metrics, such as code coverage, are insufficient to
+capture whether tests actually detect defects. Furthermore, the
+lack of characterization of the defect type that escapes testing
+makes it difficult to direct test strategy improvement efforts in
+a data-driven manner. This work investigates the relationship
+between Orthogonal Defect Classification (ODC) categories and test
+effectiveness, measured through mutation testing, seeking to
+verify whether different defect types exhibit distinct detection
+levels. To this end, bug-fixing pull requests were mined from
+open-source GitHub repositories, classified according to ODC
+attributes, and evaluated through mutation testing (using Stryker),
+comparing the test suite's detection capability before and after
+the defect fix. [RESULT TO BE FILLED IN]. This study contributes to
+the software engineering literature by integrating, for the first
+time, a well-established defect-cause taxonomy with a test
+effectiveness metric more rigorous than coverage, offering insights
+for defect-type-driven, data-oriented test strategies.
+
+ \vspace{1em}
+ \noindent
+ \textbf{Keywords}: Software testing; Mutation testing; ODC; Defect detection.
+\end{resumo}
+
+% ---
+% Sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+% ---
+% Elementos textuais
+% ---
+\textual
+
+\section{Introdução}
+
+A qualidade dos testes de software é uma questão crítica para qualquer
+aplicação, porém, métricas tradicionais, tais como a cobertura de testes,
+são insuficientes para medir se os testes realmente detectam defeitos
+\cite{papadakis2018}.
+Um obstáculo comum é a falta de definição do tipo de defeito que escapa
+dos testes, fazendo com que equipes não consigam melhorar a estratégia
+de testes de forma direcionada e orientada a dados.
+
+Nesse contexto, a taxonomia ODC (Orthogonal Defect Classification)
+\cite{chillarege1992} oferece um mecanismo consolidado para classificar
+as causas dos defeitos de software, enquanto o mutation testing fornece
+uma métrica de eficácia de testes com maior rigor do que a simples
+cobertura de linhas de código \cite{papadakis2018}.
+A correlação entre essas duas abordagens, no entanto, ainda não foi
+investigada empiricamente, configurando uma lacuna relevante na
+literatura \cite{butcher2002, chillarege1992}.
+
+Este artigo investiga se categorias ODC distintas apresentam diferentes
+níveis de detecção quando avaliadas por meio do mutation score.
+
+% ---
+% Elementos pós-textuais
+% ---
+\postextual
+
+\bibliography{bibliografia/references}
+
+\end{document}
